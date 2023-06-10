@@ -3,6 +3,10 @@ const router = express.Router();
 
 const ctrls = require('../controllers')
 
-// ADD REVIEW ROUTES
+//Create New Review
+router.post('/', ctrls.reviews.create)
+
+//Delete Review
+router.delete('/:id', ctrls.reviews.destroy)
 
 module.exports = router

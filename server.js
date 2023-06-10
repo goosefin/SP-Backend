@@ -36,7 +36,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 
 app.use('/spotussy', routes.spotussys);
-app.use('/spotussy', routes.users);
+app.use('/spotussy/review', routes.reviews);
 
 app.listen(PORT, () =>{
     console.log('Listening on port', PORT)

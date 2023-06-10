@@ -8,7 +8,6 @@ const create = async (req,res) =>{
         console.log('New Review: ', newReview)
         return res.status(200).json({review:newReview})
     } catch(err){
-        console.log(db.User.reviews)
         return res.status(404).json({error:err.message})
     }
 }

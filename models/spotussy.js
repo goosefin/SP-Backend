@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
 const spotussySchema = new mongoose.Schema({
-    name: {type:String},
-    address: {type:String, requires:true},
+    name: {type:String, required:true},
+    address: {type:String, required:true},
     borough: {type: String, required:true},
     image: {type: String},
     atmosphere: {type: Number},

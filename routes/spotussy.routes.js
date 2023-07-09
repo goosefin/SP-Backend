@@ -6,6 +6,9 @@ const ctrls = require('../controllers')
 // All spotussys
 router.get('/', ctrls.spotussys.index);
 
+//Update spotussy
+router.put('/:id', ctrls.spotussys.update)
+
 //New Spotussy
 router.post('/', ctrls.spotussys.create)
 

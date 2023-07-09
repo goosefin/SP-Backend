@@ -15,6 +15,21 @@ const index = async (req,res) =>{
     }
 }
 
+//Edit 
+const update = async (req,res) =>{
+    try{
+        const oneSpot = await db.Spotussy.findByIdAndUpdate(req.params.id, 
+            {
+                $set:req.body
+            },
+            {new:true}
+            )
+        return res.status(200).json(oneSpot)
+    }catch(err){
+        return res.status(400).json({error:err.message})
+    }
+}
+
 //Create
 const create = async (req,res) =>{
     try{
@@ -42,6 +57,7 @@ const destroy = async (req,res) =>{
 
 module.exports = {
     index,
+    update,
     create,
     destroy
 }

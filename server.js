@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000
 
 const app = express()
 require('./config/db.connection')
-const whitelist = ['http://localhost:3000']
+const whitelist = ['http://localhost:3000', 'https://spotussy-backend-58b473d1bb58.herokuapp.com/',`${process.env.MONGODB_URI}`]
 
 const corsOptions = {
     origin: function (origin, callback) {

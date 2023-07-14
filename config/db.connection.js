@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const connectionStr = process.env.MONGODB_URI || 'mongodb://localhost:27017/SPDB'
+const connectionStr = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/SPDB'
 
 mongoose.connect(connectionStr)
 
